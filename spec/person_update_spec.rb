@@ -19,20 +19,20 @@ describe Person do
 
   describe 'second_name' do
     it 'is initially calculated from the full name' do
-      expect(@person.second_name).to eq('Manchump')
+      expect(@person.last_name).to eq('Manchump')
     end
 
     it 'is initially calculated from the full name when it is composite' do
       params = { name: "Pieter van den Hoogenband", dob: '14/3/1978' }
       p = Person.new(params)
 
-      expect(p.second_name).to eq('van den Hoogenband')
+      expect(p.last_name).to eq('van den Hoogenband')
     end
 
     it 'can be changed' do
-      @person.second_name = "Twump"
+      @person.last_name = "Twump"
 
-      expect(@person.second_name).to eq("Twump")
+      expect(@person.last_name).to eq("Twump")
     end
   end
 

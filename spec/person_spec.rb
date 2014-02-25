@@ -15,14 +15,14 @@ describe Person do
       params = { name: 'Boris Manchump', dob: '13/1/1989' }
       p = Person.new(params)
 
-      expect(p.second_name).to eq('Manchump')
+      expect(p.last_name).to eq('Manchump')
     end
 
     it 'is calculated from the full name when it is composite' do
       params = { name: "Pieter van den Hoogenband", dob: '14/3/1978' }
       p = Person.new(params)
 
-      expect(p.second_name).to eq('van den Hoogenband')
+      expect(p.last_name).to eq('van den Hoogenband')
     end
   end
 
