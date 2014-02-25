@@ -13,6 +13,6 @@ describe Circle do
 
   it 'calculates its circumference' do
     c = Circle.new(10)
-    expect(c.circumference).to eq(62.84)
+    expect(c.circumference).to be_within(0.000001).of(62.84)
   end
 end
