@@ -60,5 +60,6 @@ describe Person do
     it 'can be changed' do
       @person.dob = "11/11/1911"
       expect(@person.dob).to eq("11/11/1911")
+    end
   end
 end
