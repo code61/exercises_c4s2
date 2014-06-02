@@ -9,4 +9,20 @@
 #
 class Square
 
+	def initialize(side)
+		@side = side
+	end
+
+	def side
+		@side
+	end
+
+	def area
+		@side * @side
+	end
+
+	def perimeter
+		4 * @side
+	end
+	
 end
