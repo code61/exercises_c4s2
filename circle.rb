@@ -23,6 +23,6 @@ class Circle
 
   # The circumference of a circle is 2*pi*r
   def circumference
-    
+		3.142 * 2 * @radius 
   end
 end
