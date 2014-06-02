@@ -9,15 +9,17 @@
 #   p.last_name  #=> "Simpson"
 #   p.dob        #=> "15/1/1990"
 #
+
 class Person
 
 	def initialize(params)
-		@name = params[:name]
+		@first_name = params[:name].split.first
+		@last_name = params[:name].split[1..-1].join(' ')
 		@dob = params[:dob]
 	end
 
 	def name
-		@name
+		[@first_name,@last_name].join(" ")
 	end
 
 	def dob
@@ -25,12 +27,23 @@ class Person
 	end
 
 	def first_name
-		@name.split.first
+		@first_name 
 	end
 
 	def last_name
-		# @name.spit.last
-		@name.split[1..-1].join(' ')
+		@last_name 
 	end
 
+	def dob=(new_dob)
+		@dob = new_dob
+	end
+
+	def first_name=(new_first_name)
+		@first_name = new_first_name
+	end
+
+	def last_name=(new_last_name)
+		@last_name = new_last_name
+	end
 end
+

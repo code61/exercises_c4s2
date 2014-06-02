@@ -17,7 +17,7 @@ describe Person do
     end
   end
 
-  describe 'second_name' do
+  describe 'last_name' do
     it 'is initially calculated from the full name' do
       expect(@person.last_name).to eq('Manchump')
     end
